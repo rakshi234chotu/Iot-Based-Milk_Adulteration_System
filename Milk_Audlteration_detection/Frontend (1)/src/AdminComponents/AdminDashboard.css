@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout */
+.admin-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #001f3f, #003366);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.6s ease;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease;
+}
+
+/* Navigation */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #00ccff;
+  transform: translateX(8px);
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: scale(1.05);
+  background: darkred;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f9;
+  animation: fadeIn 0.8s ease;
+  overflow-y: auto;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

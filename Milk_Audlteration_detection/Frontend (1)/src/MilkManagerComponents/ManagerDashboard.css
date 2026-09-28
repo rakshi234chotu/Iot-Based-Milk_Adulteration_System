@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Layout */
+.manager-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.manager-sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #002244, #004488);
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.5s ease;
+}
+
+.manager-logo {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 22px;
+  animation: fadeIn 1s ease;
+}
+
+/* Nav */
+.manager-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manager-sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.manager-sidebar a:hover {
+  background: #00ccff;
+  transform: translateX(6px);
+}
+
+.manager-sidebar a.active {
+  background: #00ff99;
+  color: black;
+}
+
+/* Logout */
+.manager-logout {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.manager-logout:hover {
+  transform: scale(1.05);
+  background: darkred;
+}
+
+/* Main Content */
+.manager-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f7fb;
+  animation: fadeIn 0.7s ease;
+  overflow-y: auto;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
